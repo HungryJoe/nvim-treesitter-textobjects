@@ -160,3 +160,9 @@
   (#make-range! "parameter.outer" @_start @parameter.inner))
 
 ; TODO: exclude comments using the future negate syntax from tree-sitter
+
+;; operands
+;; Separate capturing left and right operands since doing both at once results in only the right one working
+(binary_operator
+    left: ((_)@operand.inner))
+(binary_operator right: (_)@operand.inner)

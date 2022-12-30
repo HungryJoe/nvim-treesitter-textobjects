@@ -22,3 +22,10 @@
 ((syntax_statement
    (pattern) @regex.inner @regex.outer)
  (#offset! @regex.outer 0 -1 0 1))
+
+;; operands
+;; Separate capturing left and right operands since doing both at once results in only the right one working
+(binary_operation
+  left: (_) @operand.inner)
+(binary_operation
+  right: (_) @operand.inner)

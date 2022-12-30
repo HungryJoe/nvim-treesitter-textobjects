@@ -98,3 +98,12 @@
 (signature
   (type_name) @parameter.inner
 )
+
+;; operands
+;; Separate capturing left and right operands since doing both at once results in only the right one working
+(exp_infix
+  ((_) (operator) ((_)@operand.inner))
+)
+(exp_infix
+  (((_)@operand.inner) (operator) (_))
+)

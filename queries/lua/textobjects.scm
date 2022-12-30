@@ -90,6 +90,13 @@
   . (_) @parameter.inner
  (#make-range! "parameter.outer" @_start @parameter.inner))
 
+;; operands
+;; Separate capturing left and right operands since doing both at once results in only the right one working
+(binary_expression
+    left: (_)@operand.inner)
+(binary_expression
+    right: (_)@operand.inner)
+
 ; scopename
 
 ; statement
